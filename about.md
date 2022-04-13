@@ -1,4 +1,9 @@
-# About
+# 关于
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+## 职业生涯中的记录
+### 1.开发碰到的问题
+### 2.学习记录
+### 3.学习资料记录
+### 4.系统架构方案记录
+
 
