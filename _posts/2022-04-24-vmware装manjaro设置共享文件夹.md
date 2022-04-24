@@ -26,7 +26,9 @@ SysVStartPriority=99
 [Install]
 WantedBy=multi-user.target
 ```
+
 11. 创建文件 sudo vim /etc/rc.local 添加如下内容
+
 ```
 #!/bin/sh
 # /etc/rc.local
@@ -37,14 +39,17 @@ if test -d /etc/rc.local.d; then
     unset rcscript
 fi
 ```
+
 12. 添加执行权限 sudo chmod a+x /etc/rc.local
 13. 创建文件夹 sudo mkdir /etc/rc.local.d
 14. 设置开启自动启动 systemctl enable rc-local.service 
 15. 可以把所有需要开启时自动启动的sh脚本放到 /etc/rc.local.d 目录下
 16. 创建一个挂载共享文件夹的sh脚本 sudo vim /etc/rc.local.d/hgfs.sh 添加如下内容
+
 ```
 #!/bin/sh -e
 
 sudo vmhgfs-fuse .host:/ /mnt/hgfs -o nonempty -o allow_other
 ```
+
 17. 重启系统 reboot 看共享文件夹是否正常进入
